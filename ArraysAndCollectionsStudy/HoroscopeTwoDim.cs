@@ -23,17 +23,17 @@ namespace ArraysAndCollectionsStudy
         {
             //initialize an array without specifying elements 
             //(100 predictions for each of the 12 zodiac signs
-            _multiDimPredArray = new string[12, 10];
+            _multiDimPredArray = new string[12, 10]; //120 spaces, not strings
         
-            Console.WriteLine("_multiDimPredArray.Length = {0}", _multiDimPredArray.Length);
-            Console.WriteLine("_multiDimPredArray.GetLength(0) = {0}", _multiDimPredArray.GetLength(0));
-            Console.WriteLine("_multiDimPredArray.GetLength(1) = {0}", _multiDimPredArray.GetLength(1));
-            Console.WriteLine("_multiDimPredArray.Rank = {0}", _multiDimPredArray.Rank);
+            Console.WriteLine("_multiDimPredArray.Length = {0}", _multiDimPredArray.Length); //The length is 120
+            Console.WriteLine("_multiDimPredArray.GetLength(0) = {0}", _multiDimPredArray.GetLength(0)); //12
+            Console.WriteLine("_multiDimPredArray.GetLength(1) = {0}", _multiDimPredArray.GetLength(1)); //10
+            Console.WriteLine("_multiDimPredArray.Rank = {0}", _multiDimPredArray.Rank); //2 dimensions in the array
 
             //fill-in the predictions
             for (int iSign = 0; iSign < _multiDimPredArray.GetLength(0); iSign++)
             {
-                for (int iPred = 0; iPred < _multiDimPredArray.GetLength(1); iPred++)
+                for (int iPred = 0; iPred < _multiDimPredArray.GetLength(1); iPred++) 
                 {
                     _multiDimPredArray[iSign, iPred] = GeneratePrediction();
                 }
